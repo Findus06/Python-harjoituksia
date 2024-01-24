@@ -13,15 +13,19 @@ for file in os.listdir():
         continue
     if os.path.isfile(file):
         files.append(file)
-        
+ 
+# Prints the files found and the list of files       
         
 print("Files found: " + str(len(files)))
 print(files)
+
+# Reads the key
 
 print("Reading key...")
 with open("thekey.key", "rb") as key:
     secretkey = key.read()
 
+# Decrypts the files
 
 print("Decrypting files...")
 for file in files:
